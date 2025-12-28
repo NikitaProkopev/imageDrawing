@@ -27,7 +27,7 @@ async function prepareImages(imagesList) {
 
             const offscreenCanvas = canvas.transferControlToOffscreen();
 
-            img.src = `./imageDrawing/images/${i + 1}.jpg`;
+            img.src = `./images/${i + 1}.jpg`;
             img.onload = () => {
                 createImageBitmap(img).then(bitmap => {
                     canvasWorker.postMessage(
